@@ -27,7 +27,7 @@ local_resource(
 docker_build_with_restart(
   'example-java-image',
   './build/jar',
-  entrypoint=['java', 'org.springframework.boot.loader.JarLauncher'],
+  entrypoint=['java', 'org.springframework.boot.loader.launch.JarLauncher'],
   dockerfile='./Dockerfile',
   live_update=[
     sync('./build/jar/dependencies', '/app'),
